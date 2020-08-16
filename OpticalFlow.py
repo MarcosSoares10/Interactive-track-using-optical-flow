@@ -56,7 +56,7 @@ while video.isOpened():
             #km/h = cm/s x 0.036
 
             resultMaskImage = cv2.line(resultMaskImage,(old_X,old_Y),(new_X,new_Y),colorforresults,2)
-            frames = cv2.circle(frames,(new_X,new_Y),5,colorforresults,2)#cv2.circle(frames,(new_X,new_Y),3,colorforresults,-1)
+            frames = cv2.circle(frames,(new_X,new_Y),5,colorforresults,2)
             resultMaskText = cv2.putText(resultMaskText, speed, (new_X,new_Y), cv2.FONT_HERSHEY_TRIPLEX, 0.5, colorforresultstext)
 
         frames = cv2.add(frames,resultMaskImage)
